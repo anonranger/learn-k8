@@ -1,0 +1,91 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container,
+.table-container {
+  width: 50%;
+}
+
+.form-container {
+  background-color: #495057;
+  padding: 20px;
+}
+
+.table-container {
+  background-color: #495057;
+  border-left: black 1px solid;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: inherit;
+  font-size: 16px; /* Increased font size */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  outline: none;
+}
+
+button {
+  background-color: #1f2937; /* Dark gray background */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  display: block;
+  margin: 0 auto; /* Center align the button */
+}
+
+button:hover {
+  background-color: #374151; /* Slightly lighter gray on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+button:focus {
+  outline: none;
+}
