@@ -26,5 +26,9 @@ COPY --from=builder /app/backend .
 # Expose the port the app runs on
 EXPOSE 80
 
+# Set environment variables for MongoDB URI and Port
+ENV MONGO_URI=mongodb://localhost:27017/
+ENV PORT=3000
+
 # Command to run the application
 CMD ["./backend"]
