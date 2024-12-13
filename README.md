@@ -7,4 +7,4 @@
 
 For detailed documentation for the project, refer to the project wiki below
 
-[Learn K8 Wiki] ([https://pages.github.com/](https://github.com/anonranger/learn-k8/wiki))
+[Learn K8 Wiki]([https://pages.github.com/](https://github.com/anonranger/learn-k8/wiki))
