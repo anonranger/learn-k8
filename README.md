@@ -1,6 +1,6 @@
-![Kunernetes](https://github.com/anonranger/learn-k8/blob/main/k8.png)
-
 **Learn Kubernetes using AWS EKS**
+
+![Kunernetes](https://github.com/anonranger/learn-k8/blob/main/k8.png)
 
 **Goals of the project:**
 
