@@ -22,8 +22,12 @@ spec:
           mountPath: /data/db
       volumes:
       - name: mongo-storage
-        persistentVolumeClaim:
-          claimName: mongo-pvc
+        hostPath:
+          path: /tmp/mongo-data  # Replace with a suitable path
+          type: DirectoryOrCreate
+      # - name: mongo-storage
+      #   persistentVolumeClaim:
+      #     claimName: mongo-pvc
 ---
 apiVersion: v1
 kind: Service
@@ -37,14 +41,17 @@ spec:
       port: 27017
       targetPort: 27017
   type: ClusterIP
+
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mongo-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: mongo-pvc
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 1Gi
+#   storageClassName: local-storage
+

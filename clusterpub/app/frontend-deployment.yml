@@ -16,22 +16,30 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sahildhingraa/learn-k8-frontend:latest
+        image: anonranger/learnk8-appui:latest
         ports:
         - containerPort: 80
         env:
         - name: VITE_BACKEND_URL
           value: http://backend-service:80 # Reference the backend service
 ---
+
+
+
 apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
+  labels:
+    app: frontend
+  # EKS Auto Cluster, creates an ingress with load balancer
+  # annotations:
+    # service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing # Makes the LB internet-facing
 spec:
+  type: ClusterIP
   selector:
     app: frontend
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: LoadBalancer

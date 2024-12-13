@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  MONGO_URI: mongodb://mongo-service:27017/learn_k8
+  PORT: "80"
+  VITE_BACKEND_URL: http://backend-service:80
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: appconf
