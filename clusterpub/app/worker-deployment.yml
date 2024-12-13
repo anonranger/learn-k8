@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: anonranger/learnk8-worker-service:latest
+        image: sahildhingraa/learn-k8-backend:latest
         ports:
         - containerPort: 80
         env:
