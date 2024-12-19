@@ -35,7 +35,6 @@ The labels you select define what action the PSA takes if a potential violation 
 > [!NOTE]
 > PSA enforce mode prevents pods with PSS violations from being applied, but does not stop higher-level controllers, such as Deployments. In fact, the Deployment will be applied successfully without any indication that the pods failed to be applied. While you can use kubectl to inspect the Deployment object, and discover the failed pods message from the PSA, the user experience could be better. To make the user experience better, multiple PSA modes (audit, enforce, warn) should be used.
 
-*As an alternative to PSA, you can use Policy-as-Code (PaC) open-sourse solutions.*
 
 
 #### Network Policy
