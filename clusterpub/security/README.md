@@ -51,8 +51,8 @@ OSI Layer 3&4 Network rules using IP Addresses and Ports, It's a builtin kuberne
 ***Network policy component is the way to control traffic flow at the IP address and port level.
 It sets rules for Pods to communicate, these are strict rules for inter cluster communication.***
 
-Senario we are solving for.
- - FRONTEND send ingress traffic to WORKER, WORKER can receive ingress traffic from only FRONTEND and send ingress traffic to DATABASE, DATABASE can receive ingress traffic from only WORKER and block all egress traffic. 
+Scenario we are solving for:
+ - The FRONTEND sends ingress traffic to the WORKER. The WORKER can receive ingress traffic only from the FRONTEND and send ingress traffic to the DATABASE. The DATABASE can receive ingress traffic only from the WORKER and block all egress traffic.
 
 [Use Network Policies with EKS Auto Mode](https://docs.aws.amazon.com/eks/latest/userguide/auto-net-pol.html)
 
