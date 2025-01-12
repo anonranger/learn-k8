@@ -9,4 +9,4 @@
 
 For detailed documentation for the project, refer to the project wiki below
 
-[Learn K8 Wiki](https://github.com/anonranger/learn-k8/wiki)
+[Learn Kubernetes - Kubernetes Security Labs using EKS - Wiki page](https://coursenotes.ai/courses/kubernetes-labs)
