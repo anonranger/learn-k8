@@ -12,6 +12,9 @@ spec:
       labels:
         app: backend
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 5000
       containers:
       - name: backend
         image: sahildhingraa/learn-k8-backend:latest
@@ -22,6 +25,10 @@ spec:
           value: "mongodb://mongo-service:27017/learn_k8"
         - name: PORT
           value: ":80"
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          privileged: false
 ---
 apiVersion: v1
 kind: Service

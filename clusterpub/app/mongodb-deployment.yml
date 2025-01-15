@@ -12,7 +12,14 @@ spec:
       labels:
         app: mongo
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 5001
       containers:
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          privileged: false
       - name: mongo
         image: mongo:latest
         ports:
@@ -25,6 +32,7 @@ spec:
         hostPath:
           path: /tmp/mongo-data  # Replace with a suitable path
           type: DirectoryOrCreate
+        
       # - name: mongo-storage
       #   persistentVolumeClaim:
       #     claimName: mongo-pvc
