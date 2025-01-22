@@ -16,12 +16,12 @@ spec:
     spec:
       securityContext:
         runAsNonRoot: true
-        runAsUser: 101
+        runAsUser: 1001
       containers:
       - name: frontend
         image: anonranger/learnk8-appui:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
         - name: VITE_BACKEND_URL
           value: http://backend-service:80 # Reference the backend service
@@ -48,5 +48,5 @@ spec:
     app: frontend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080

@@ -24,7 +24,7 @@ WORKDIR /app
 COPY --from=builder /app/backend .
 
 # Expose the port the app runs on
-EXPOSE 80
+EXPOSE 8080
 
 # Set environment variables for MongoDB URI and Port
 ENV MONGO_URI=mongodb://localhost:27017/

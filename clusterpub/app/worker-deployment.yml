@@ -19,7 +19,7 @@ spec:
       - name: backend
         image: sahildhingraa/learn-k8-backend:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
         - name: MONGO_URI
           value: "mongodb://mongo-service:27017/learn_k8"
@@ -39,6 +39,6 @@ spec:
     app: backend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080
   type: ClusterIP

@@ -19,13 +19,15 @@ ENV VITE_BACKEND_URL=${VITE_BACKEND_URL}
 RUN npm run build
 
 # Use a minimal base image for the final stage
-FROM nginx:alpine
+# FROM nginx:alpine
+FROM bitnami/nginx:latest
 
 # Copy the built frontend files to the Nginx HTML directory
-COPY --from=builder /app/dist /usr/share/nginx/html
+# COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /opt/bitnami/nginx/html
 
 # Expose the port Nginx will serve on
-EXPOSE 80
+EXPOSE 8080
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]

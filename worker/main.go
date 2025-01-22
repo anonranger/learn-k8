@@ -67,7 +67,7 @@ func main() {
 
 	PORT := AppConfig.PORT
 	if PORT == "" {
-		PORT = ":80"
+		PORT = ":8080"
 	}
 
 	if err := app.Listen(PORT); err != nil {
